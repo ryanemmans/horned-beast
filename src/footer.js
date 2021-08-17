@@ -1,6 +1,6 @@
 function Footer() {
-  return(
-  <h3>Author: Ryan Emmans</h3>
+  return (
+    <h3>Author: Ryan Emmans</h3>
   );
 }
 
