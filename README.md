@@ -12,13 +12,13 @@ Number and name of feature: Feature #1: Display images
 
 - Estimate of time needed to complete: 1 hour
 - Start time: 3:15pm
-- Finish time: 
-- Actual time needed to complete: 
+- Finish time: 4:15pm
+- Actual time needed to complete: 1 hour
 
 Number and name of feature: Feature #2: Allow users to vote for their favorite beast
 
 - Estimate of time needed to complete: 3 hours
-- Start time: 
+- Start time: 4:15pm
 - Finish time: _____
 - Actual time needed to complete: _____
 
