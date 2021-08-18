@@ -7,79 +7,43 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
 class Main extends Component {
+  /*
+    Print out index 0 - 4
+    Print out index 5 - 9
+  */
   render() {
     return (
       <Container>
         <h2>{this.props.message}</h2>
-        <Row>
-          <Col>
-            <BeastImage image_url={beastImages[0].image_url} title={beastImages[0].title} description={beastImages[0].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[1].image_url} title={beastImages[1].title} description={beastImages[1].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[2].image_url} title={beastImages[2].title} description={beastImages[2].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[3].image_url} title={beastImages[3].title} description={beastImages[3].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[4].image_url} title={beastImages[4].title} description={beastImages[4].description} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <BeastImage image_url={beastImages[5].image_url} title={beastImages[5].title} description={beastImages[5].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[6].image_url} title={beastImages[6].title} description={beastImages[6].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[7].image_url} title={beastImages[7].title} description={beastImages[7].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[8].image_url} title={beastImages[8].title} description={beastImages[8].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[9].image_url} title={beastImages[9].title} description={beastImages[9].description} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <BeastImage image_url={beastImages[10].image_url} title={beastImages[10].title} description={beastImages[10].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[11].image_url} title={beastImages[11].title} description={beastImages[11].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[12].image_url} title={beastImages[12].title} description={beastImages[12].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[13].image_url} title={beastImages[13].title} description={beastImages[13].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[14].image_url} title={beastImages[14].title} description={beastImages[14].description} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <BeastImage image_url={beastImages[15].image_url} title={beastImages[15].title} description={beastImages[15].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[16].image_url} title={beastImages[16].title} description={beastImages[16].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[17].image_url} title={beastImages[17].title} description={beastImages[17].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[18].image_url} title={beastImages[18].title} description={beastImages[18].description} />
-          </Col>
-          <Col>
-            <BeastImage image_url={beastImages[19].image_url} title={beastImages[19].title} description={beastImages[19].description} />
-          </Col>
-        </Row>
+        <BeastRow startIndex={0} />
+        <BeastRow startIndex={5} />
+        <BeastRow startIndex={10} />
+        <BeastRow startIndex={15} />
       </Container>
+    );
+  }
+}
+
+class BeastRow extends Component {
+  render() {
+    return (
+      <Row>
+        <BeastCol index={this.props.startIndex} />
+        <BeastCol index={this.props.startIndex + 1} />
+        <BeastCol index={this.props.startIndex + 2} />
+        <BeastCol index={this.props.startIndex + 3} />
+        <BeastCol index={this.props.startIndex + 4} />
+      </Row >
+    );
+  }
+}
+
+class BeastCol extends Component {
+  render() {
+    return (
+      <Col>
+        <BeastImage image_url={beastImages[this.props.index].image_url} title={beastImages[this.props.index].title} description={beastImages[this.props.index].description} />
+      </Col>
     );
   }
 }
