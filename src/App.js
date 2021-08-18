@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
-      <Header />
-      <Main />
+      <Header title="Horned Beast Application" />
+      <Main message="Vote For Your Favorite Horned Beast Images:" />
       <Footer />
     </>
   );
