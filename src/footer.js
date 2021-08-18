@@ -1,6 +1,10 @@
-function Footer() {
+import Container from 'react-bootstrap/Container';
+
+function Footer(props) {
   return (
-    <h3>Author: Ryan Emmans</h3>
+    <Container>
+      <h3>{props.author}</h3>
+    </Container>
   );
 }
 

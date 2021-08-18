@@ -1,4 +1,5 @@
 import { Component } from 'react';
+// import './App.css';
 import beastImages from './data.json';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

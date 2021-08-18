@@ -25,7 +25,7 @@ Number and name of feature: Feature #2: Allow users to vote for their favorite b
 Number and name of feature: Feature 3: Bootstrap
 
 - Estimate of time needed to complete: 2 hours
-- Start time: _____
+- Start time: 6:45
 - Finish time: _____
 - Actual time needed to complete: _____
 
@@ -37,6 +37,7 @@ Number and name of feature: Feature 3: Bootstrap
 
 - [Stack Overflow](https://stackoverflow.com/)
 - [React Official Documentation](https://reactjs.org/docs/getting-started.html)
+- [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
 - [Likes Counter Help](https://javascript.plainenglish.io/creating-a-reusable-like-button-component-in-react-8028d17c024c)
 
 ### Reflections and Comments
