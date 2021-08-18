@@ -26,8 +26,8 @@ Number and name of feature: Feature 3: Bootstrap
 
 - Estimate of time needed to complete: 2 hours
 - Start time: 6:45
-- Finish time: _____
-- Actual time needed to complete: _____
+- Finish time: 8.00pm
+- Actual time needed to complete: 1.25 hours
 
 - - -
 
