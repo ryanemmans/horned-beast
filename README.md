@@ -2,7 +2,12 @@
 
 ## ***Problem Domain***
 
-This is a React application that displays images and information of horned animals. It will allow the user to filter the images by number of horns and choose their favorite image.
+This is a React application that displays images and information of horned animals. It will allow the user to filter the images by number of horns and choose their favorite image. The app will be deployed using Netlify.
+
+- - -
+
+## ***Deploy Status:***
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2019f9a4-848f-4856-87b5-e8173aaac233/deploy-status)](https://app.netlify.com/sites/ryanemmans-horned-beast/deploys)
 
 - - -
 
@@ -28,6 +33,17 @@ Number and name of feature: Feature 3: Bootstrap
 - Start time: 6:45
 - Finish time: 8.00pm
 - Actual time needed to complete: 1.25 hours
+
+- - -
+
+### Class 03 Time Estimate
+
+Number and name of feature: Display a Modal
+
+- Estimate of time needed to complete: 2 hours
+- Start time: 
+- Finish time: 
+- Actual time needed to complete: 
 
 - - -
 
