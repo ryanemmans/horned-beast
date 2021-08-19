@@ -10,14 +10,13 @@ export default class HornedBeast extends React.Component {
     };
   }
 
-  // enlarge = () => {
-  //   this.setState({
-  //   });
-
-  //   if (this.props.image_url === clicked) {
-  //     this.props.onEnlarge();
-  //   }
-  // }
+  enlarge = () => {
+    this.props.enlarge({
+      image_url: this.props.image_url,
+      title: this.props.title,
+      description: this.props.description
+    });
+  }
 
   handleClick = () => {
     let newCount = this.state.likes + 1;
@@ -26,20 +25,22 @@ export default class HornedBeast extends React.Component {
     });
   };
 
-  render() {
-    // const [modalShow, setModalShow] = React.useState(false);
 
+  render() {
     return (
       <Card>
-        <Card.Img variant="top" src={this.props.image_url} alt="horned beast" rounded fluid />
-        {/* <MyVerticallyCenteredModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        /> */}
+        <Card.Img
+          onClick={this.enlarge}
+          variant="top"
+          src={this.props.image_url}
+          alt="horned beast"
+          rounded="true"
+          fluid="true"
+          style={{ cursor: "pointer" }}/>
         <Card.Body>
-          <Card.Text onClick={this.handleClick}
+          {this.props.hideLikes ? null : <Card.Text onClick={this.handleClick}
             likes={this.state.likes}>
-            <Button variant="outline-danger"><h3>&#9829;{this.state.likes}</h3></Button></Card.Text>
+            <Button variant="outline-danger">&#9829; {this.state.likes}</Button></Card.Text>}
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
         </Card.Body>
@@ -48,4 +49,4 @@ export default class HornedBeast extends React.Component {
   }
 }
 
-// onClick={() => setModalShow(true)} 
+// Thanks Kristian Esvelt !!

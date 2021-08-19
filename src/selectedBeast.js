@@ -1,28 +1,32 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import HornedBeast from './hornedBeast';
 
 
 export default class SelectedBeast extends React.Component {
   render() {
+    console.log(this.props.display);
     return (
-      <Modal show={this.props.show} onHide={this.props.onClose}>
+      <Modal
+        onClick={this.props.onClose}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        show={this.props.show} onHide={this.props.onClose}>
         <Modal.Header closeButton>
-          <Modal.Title title={this.props.title}>
-          </Modal.Title>
+          <h2>{this.props.display.title}</h2>
         </Modal.Header>
         <Modal.Body>
           <HornedBeast
-            image_url={this.props.image_url}
-            // onClick={this.handleClick}
-            // likes={this.state.likes}>
-            // <Button variant="outline-danger"><h3>&#9829;{this.state.likes}</h3></Button>
-            description={this.props.description}
-          // key={i}
+            image_url={this.props.display.image_url}
+            // style={{ cursor: "default" }}
+            description={this.props.display.description}
+            hideLikes={true}
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.props.onClose}>
+          <Button variant="primary" onClick={this.props.onClose}>
             Close
           </Button>
         </Modal.Footer>
@@ -30,5 +34,3 @@ export default class SelectedBeast extends React.Component {
     );
   }
 }
-
-
