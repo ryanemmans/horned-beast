@@ -11,7 +11,11 @@ export default class HornedBeast extends React.Component {
   }
 
   enlarge = () => {
-    this.props.enlarge({image_url:this.props.image_url, title:this.props.title, description:this.props.description});
+    this.props.enlarge({
+      image_url: this.props.image_url,
+      title: this.props.title,
+      description: this.props.description
+    });
   }
 
   handleClick = () => {
@@ -32,11 +36,11 @@ export default class HornedBeast extends React.Component {
           alt="horned beast"
           rounded="true"
           fluid="true"
-          style={{ cursor: "zoomIn" }} />
+          style={{ cursor: "pointer" }}/>
         <Card.Body>
-          <Card.Text onClick={this.handleClick}
+          {this.props.hideLikes ? null : <Card.Text onClick={this.handleClick}
             likes={this.state.likes}>
-            <Button variant="outline-danger">&#9829; {this.state.likes}</Button></Card.Text>
+            <Button variant="outline-danger">&#9829; {this.state.likes}</Button></Card.Text>}
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
         </Card.Body>
@@ -44,3 +48,5 @@ export default class HornedBeast extends React.Component {
     );
   }
 }
+
+// Thanks Kristian Esvelt !!

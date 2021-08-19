@@ -30,12 +30,16 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Header title="Gallery of Horns!" />
+        <Header title ="Gallery of Horns!" />
         <Main message="Vote For Your Favorite Horned Beasts"
           beastImages={this.state.beastImages}
           onEnlarge={this.enlargeHandler} />
-        {this.state.display ? <SelectedBeast display={this.state.display}
-          show={this.state.enlargeBeast} onClose={this.closeHandler} /> : null}
+        {this.state.display ?
+          <SelectedBeast
+            display={this.state.display}
+            show={this.state.enlargeBeast}
+            onClose={this.closeHandler} />
+          : null}
         <Footer author="Author: Ryan Emmans" />
       </>
     );

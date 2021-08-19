@@ -9,6 +9,7 @@ export default class SelectedBeast extends React.Component {
     console.log(this.props.display);
     return (
       <Modal
+        onClick={this.props.onClose}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -19,11 +20,13 @@ export default class SelectedBeast extends React.Component {
         <Modal.Body>
           <HornedBeast
             image_url={this.props.display.image_url}
+            // style={{ cursor: "default" }}
             description={this.props.display.description}
+            hideLikes={true}
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.props.onClose}>
+          <Button variant="primary" onClick={this.props.onClose}>
             Close
           </Button>
         </Modal.Footer>
