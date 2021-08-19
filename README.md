@@ -42,8 +42,8 @@ Number and name of feature: Display a Modal
 
 - Estimate of time needed to complete: 4 hours
 - Start time: 2:00pm
-- Finish time: 9:00pm
-- Actual time needed to complete: 7+ hours, did not complete.
+- Finish time: 2:30pm following day
+- Actual time needed to complete: 9+ hours
 
 - - -
 
@@ -57,4 +57,6 @@ Number and name of feature: Display a Modal
 - [Likes Counter Help](https://javascript.plainenglish.io/creating-a-reusable-like-button-component-in-react-8028d17c024c)
 
 ### Reflections and Comments
-Thanks to my classmates Kason and Patrick for helping me get properly set up on my main branch.
+
+- Thanks to my classmates Kason and Patrick for helping me get properly set up on my main branch.
+- TA Kristian Esvelt for help with my modal.

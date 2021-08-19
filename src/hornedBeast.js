@@ -36,7 +36,7 @@ export default class HornedBeast extends React.Component {
           alt="horned beast"
           rounded="true"
           fluid="true"
-          style={{ cursor: "pointer" }}/>
+          style={{ cursor: 'pointer' }}/>
         <Card.Body>
           {this.props.hideLikes ? null : <Card.Text onClick={this.handleClick}
             likes={this.state.likes}>
@@ -48,5 +48,3 @@ export default class HornedBeast extends React.Component {
     );
   }
 }
-
-// Thanks Kristian Esvelt !!
