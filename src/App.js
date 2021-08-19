@@ -11,7 +11,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       beastImages: beastImages,
-      enlargeBeast: true, // change to false
+      enlargeBeast: false,
     };
   }
 
@@ -19,24 +19,13 @@ export default class App extends React.Component {
     this.setState({ enlargeBeast: false });
   }
 
-  enlargeHandler = () => {
+  enlargeHandler = (selection) => {
     // alert(beastInfo);
     this.setState({
       enlargeBeast: true,
-      display: this.beastImages
+      display: selection,
     });
   }
-
-  // enlarge = (beast) => {
-  //   let beasts = this.state.beastImages.map( (b))
-  //     if(b.name === beastImages) {
-  //       b.modal;
-
-  //     }
-  //     return b;
-  //   });
-  //   this.setState({beastImages: beasts});
-  // }
 
   render() {
     return (
@@ -45,7 +34,8 @@ export default class App extends React.Component {
         <Main message="Vote For Your Favorite Horned Beasts"
           beastImages={this.state.beastImages}
           onEnlarge={this.enlargeHandler} />
-        <SelectedBeast show={this.state.enlargeBeast} onClose={this.closeHandler} />
+        {this.state.display ? <SelectedBeast display={this.state.display}
+          show={this.state.enlargeBeast} onClose={this.closeHandler} /> : null}
         <Footer author="Author: Ryan Emmans" />
       </>
     );

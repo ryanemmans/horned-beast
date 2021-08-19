@@ -11,14 +11,7 @@ export default class HornedBeast extends React.Component {
   }
 
   enlarge = () => {
-    // console.log(e);
-    this.props.onEnlarge(this.props);
-    alert(this.props.title);
-    //   this.setState({
-    //   });
-
-    //   if (this.props.image_url === clicked) {
-    //   }
+    this.props.enlarge({image_url:this.props.image_url, title:this.props.title, description:this.props.description});
   }
 
   handleClick = () => {
@@ -28,16 +21,18 @@ export default class HornedBeast extends React.Component {
     });
   };
 
-  render() {
-    // const [modalShow, setModalShow] = React.useState(false);
 
+  render() {
     return (
       <Card>
-        <Card.Img onClick={this.enlarge} variant="top" src={this.props.image_url} alt="horned beast" rounded="true" fluid="true" />
-        {/* <MyVerticallyCenteredModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        /> */}
+        <Card.Img
+          onClick={this.enlarge}
+          variant="top"
+          src={this.props.image_url}
+          alt="horned beast"
+          rounded="true"
+          fluid="true"
+          style={{ cursor: "zoomIn" }} />
         <Card.Body>
           <Card.Text onClick={this.handleClick}
             likes={this.state.likes}>
@@ -49,5 +44,3 @@ export default class HornedBeast extends React.Component {
     );
   }
 }
-
-// onClick={() => setModalShow(true)}
