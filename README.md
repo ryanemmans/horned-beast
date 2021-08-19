@@ -40,8 +40,8 @@ Number and name of feature: Feature 3: Bootstrap
 
 Number and name of feature: Display a Modal
 
-- Estimate of time needed to complete: 2 hours
-- Start time: 
+- Estimate of time needed to complete: 4 hours
+- Start time: 2:30pm
 - Finish time: 
 - Actual time needed to complete: 
 
