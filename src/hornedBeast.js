@@ -1,13 +1,23 @@
-import { Component } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
-export default class HornedBeast extends Component {
+export default class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = { // JavaScript object
       likes: 0
     };
   }
+
+  // enlarge = () => {
+  //   this.setState({
+  //   });
+
+  //   if (this.props.image_url === clicked) {
+  //     this.props.onEnlarge();
+  //   }
+  // }
 
   handleClick = () => {
     let newCount = this.state.likes + 1;
@@ -17,13 +27,19 @@ export default class HornedBeast extends Component {
   };
 
   render() {
+    // const [modalShow, setModalShow] = React.useState(false);
+
     return (
-      <Card
-        onClick={this.handleClick}
-        likes={this.state.likes}>
+      <Card>
         <Card.Img variant="top" src={this.props.image_url} alt="horned beast" rounded fluid />
+        {/* <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        /> */}
         <Card.Body>
-          <Card.Text>&#9829;{this.state.likes}</Card.Text>
+          <Card.Text onClick={this.handleClick}
+            likes={this.state.likes}>
+            <Button variant="outline-danger"><h3>&#9829;{this.state.likes}</h3></Button></Card.Text>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
         </Card.Body>
@@ -31,3 +47,5 @@ export default class HornedBeast extends Component {
     );
   }
 }
+
+// onClick={() => setModalShow(true)} 

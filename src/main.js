@@ -1,11 +1,16 @@
-import { Component } from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HornedBeast from './hornedBeast';
-// import Data from './data.json';
 
-export default class Main extends Component {
+export default class Main extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //   };
+  // }
+
   render() {
     return (
       <Container>
