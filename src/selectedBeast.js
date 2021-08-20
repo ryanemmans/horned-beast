@@ -20,8 +20,8 @@ export default class SelectedBeast extends React.Component {
         <Modal.Body>
           <HornedBeast
             image_url={this.props.display.image_url}
-            // style={{ cursor: "default" }}
             description={this.props.display.description}
+            horns={this.props.display.horns}
             hideLikes={true}
           />
         </Modal.Body>

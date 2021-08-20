@@ -19,12 +19,31 @@ export default class App extends React.Component {
     this.setState({ enlargeBeast: false });
   }
 
-  enlargeHandler = (selection) => {
-    // alert(beastInfo);
+  enlargeHandler = (click) => {
     this.setState({
       enlargeBeast: true,
-      display: selection,
+      display: click,
     });
+  }
+
+  filterHorns = (selection) => {
+    let updatedItems;
+
+    if (selection === 1) {
+      updatedItems = beastImages.filter((i) => i.horns === 1);
+      this.setState({ beastImages: updatedItems });
+    } else if (selection === 2) {
+      updatedItems = beastImages.filter((i) => i.horns === 2);
+      this.setState({ beastImages: updatedItems });
+    } else if (selection === 3) {
+      updatedItems = beastImages.filter((i) => i.horns === 3);
+      this.setState({ beastImages: updatedItems });
+    } else if (selection === 100) {
+      updatedItems = beastImages.filter((i) => i.horns === 100);
+      this.setState({ beastImages: updatedItems });
+    } else {
+      this.setState({ beastImages: beastImages });
+    }
   }
 
   render() {
@@ -33,7 +52,8 @@ export default class App extends React.Component {
         <Header title ="Gallery of Horns!" />
         <Main message="Vote For Your Favorite Horned Beasts"
           beastImages={this.state.beastImages}
-          onEnlarge={this.enlargeHandler} />
+          onEnlarge={this.enlargeHandler}
+          filterHorns={this.filterHorns} />
         {this.state.display ?
           <SelectedBeast
             display={this.state.display}
