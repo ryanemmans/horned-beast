@@ -5,10 +5,15 @@ import Button from 'react-bootstrap/Button';
 export default class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { // JavaScript object
-      likes: 0
-    };
+    // this.state = { // JavaScript object
+    //   likes: 0
+    // };
   }
+
+  handleClick = () => {
+    let newCount = this.props.likes + 1;
+    this.props.addLike(newCount, this.props.title);
+  };
 
   enlarge = () => {
     this.props.enlarge({
@@ -18,13 +23,6 @@ export default class HornedBeast extends React.Component {
       horns: this.props.horns,
     });
   }
-
-  handleClick = () => {
-    let newCount = this.state.likes + 1;
-    this.setState({
-      likes: newCount
-    });
-  };
 
   render() {
     return (
@@ -41,8 +39,8 @@ export default class HornedBeast extends React.Component {
           {this.props.hideLikes ? null :
             <Card.Text
               onClick={this.handleClick}
-              likes={this.state.likes}>
-              <Button variant="outline-danger">&#9829; {this.state.likes}</Button></Card.Text>}
+              likes={this.props.likes}>
+              <Button variant="outline-danger">&#9829; {this.props.likes}</Button></Card.Text>}
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
             <p>{this.props.description}</p>

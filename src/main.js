@@ -36,13 +36,14 @@ export default class Main extends React.Component {
 
         <Row xs={1} md={2} lg={4} xl={6} xxl={8}>
           {this.props.beastImages.map((beast, i) => (
-            <Col>
+            <Col key={i}>
               <HornedBeast
-                key={i}
                 image_url={beast.image_url}
                 title={beast.title}
                 description={beast.description}
                 keyword={beast.keyword}
+                likes={beast.likes}
+                addLike={this.props.addLike}
                 horns={beast.horns}
                 selectedbeast={this.props.selectedBeast}
                 enlarge={this.props.onEnlarge}
