@@ -59,4 +59,6 @@ Number and name of feature: Display a Modal
 ### Reflections and Comments
 
 - Thanks to my classmates Kason and Patrick for helping me get properly set up on my main branch.
-- TA Kristian Esvelt for help with my modal.
+- TA Kristian Esvelt for help with my modal and the likes buttons rendering with their corresponding beast.
+- TA Hexx King for help with getting my horns filter straightened out.
+- TA Joe Hennock for help with sorting out my grid and map issue.
