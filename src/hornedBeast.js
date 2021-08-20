@@ -14,7 +14,8 @@ export default class HornedBeast extends React.Component {
     this.props.enlarge({
       image_url: this.props.image_url,
       title: this.props.title,
-      description: this.props.description
+      description: this.props.description,
+      horns: this.props.horns,
     });
   }
 
@@ -24,7 +25,6 @@ export default class HornedBeast extends React.Component {
       likes: newCount
     });
   };
-
 
   render() {
     return (
@@ -36,13 +36,18 @@ export default class HornedBeast extends React.Component {
           alt="horned beast"
           rounded="true"
           fluid="true"
-          style={{ cursor: 'pointer' }}/>
+          style={{ cursor: 'pointer' }} />
         <Card.Body>
-          {this.props.hideLikes ? null : <Card.Text onClick={this.handleClick}
-            likes={this.state.likes}>
-            <Button variant="outline-danger">&#9829; {this.state.likes}</Button></Card.Text>}
+          {this.props.hideLikes ? null :
+            <Card.Text
+              onClick={this.handleClick}
+              likes={this.state.likes}>
+              <Button variant="outline-danger">&#9829; {this.state.likes}</Button></Card.Text>}
           <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
+          <Card.Text>
+            <p>{this.props.description}</p>
+            <p>Horns: {this.props.horns}</p>
+          </Card.Text>
         </Card.Body>
       </Card>
     );
