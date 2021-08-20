@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from "react-bootstrap/Form";
-import ListGroup from "react-bootstrap/ListGroup";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HornedBeast from './hornedBeast';
@@ -35,26 +34,22 @@ export default class Main extends React.Component {
           </Col>
         </Row>
 
-        <ListGroup>
-          <Row xs={1} md={2} lg={4} xl={6} xxl={8}>
+        <Row xs={1} md={2} lg={4} xl={6} xxl={8}>
+          {this.props.beastImages.map((beast, i) => (
             <Col>
-              <ListGroup.Item>
-                {this.props.beastImages.map((beast, i) => (
-                  <HornedBeast
-                    key={i}
-                    image_url={beast.image_url}
-                    title={beast.title}
-                    description={beast.description}
-                    keyword={beast.keyword}
-                    horns={beast.horns}
-                    selectedbeast={this.props.selectedBeast}
-                    enlarge={this.props.onEnlarge}
-                  />
-                ))}
-              </ListGroup.Item>
+              <HornedBeast
+                key={i}
+                image_url={beast.image_url}
+                title={beast.title}
+                description={beast.description}
+                keyword={beast.keyword}
+                horns={beast.horns}
+                selectedbeast={this.props.selectedBeast}
+                enlarge={this.props.onEnlarge}
+              />
             </Col>
-          </Row>
-        </ListGroup>
+          ))}
+        </Row>
       </Container>
     );
   }
